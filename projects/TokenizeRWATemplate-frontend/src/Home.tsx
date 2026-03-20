@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 
 /**
  * Home Page
- * Landing page showcasing the RWA tokenization platform
- * Displays features, how it works, and CTAs to connect wallet and create assets
+ * Landing page for Virtue Assets – institutional RWA tokenisation platform
  */
 export default function Home() {
   const { activeAddress } = useWallet()
@@ -14,26 +13,29 @@ export default function Home() {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         <div className="text-center">
-          <div className="inline-block mb-4 px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 text-sm font-semibold rounded-full">
-            RWA Tokenization Platform
+          <div className="inline-block mb-4 px-3 py-1 bg-slate-100 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-full border border-slate-200 dark:border-slate-700">
+            Virtue Assets
           </div>
 
           <h1 className="mt-4 text-5xl sm:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
-            Tokenize Real-World Assets on Algorand
+            Trusted infrastructure for
+            <br />
+            real‑world asset tokenisation
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Create Algorand Standard Assets (ASA) with built-in compliance features. Perfect for founders prototyping RWA solutions.
+            Launch compliant Algorand Standard Assets (ASA) for real estate, commodities,
+            or private equity. Built for founders, operators, and institutions.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/tokenize"
               className={`px-8 py-3 rounded-lg font-semibold transition text-white shadow-md ${
-                activeAddress ? 'bg-teal-600 hover:bg-teal-700' : 'bg-slate-400 cursor-not-allowed'
+                activeAddress ? 'bg-slate-800 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600' : 'bg-slate-400 cursor-not-allowed'
               }`}
             >
-              Start Tokenizing
+              Start Tokenising
             </Link>
 
             <a
@@ -42,12 +44,12 @@ export default function Home() {
               rel="noreferrer"
               href="https://dev.algorand.co/concepts/assets/overview/"
             >
-              Learn about ASAs
+              Learn about tokenisation
             </a>
           </div>
 
           {!activeAddress && (
-            <p className="mt-6 text-slate-500 dark:text-slate-400">Connect your wallet using the button in the top-right to get started.</p>
+            <p className="mt-6 text-slate-500 dark:text-slate-400">Connect your wallet using the button in the top‑right to start.</p>
           )}
         </div>
       </div>
@@ -56,19 +58,18 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
         <div className="flex items-end justify-between gap-6 mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">How it works</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">End‑to‑end workflow</h2>
             <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
-              A clean, end-to-end flow: connect → mint → track → transfer.
+              A clean, verifiable path from asset creation to secondary market.
             </p>
           </div>
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
             <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-            Ready for TestNet demos
+            Ready for TestNet pilots
           </div>
         </div>
 
-        {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Step 1 */}
           <div
@@ -78,14 +79,14 @@ export default function Home() {
             <div className="flex items-start gap-4">
               <div
                 className="shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl
-                              bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 font-bold"
+                              bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 font-bold"
               >
                 1
               </div>
               <div className="min-w-0">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Connect Wallet</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Connect wallet</h3>
                 <p className="mt-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Use Pera, Defly, Exodus, or KMD on localnet. One click to connect.
+                  Use Pera, Defly, or any Algorand wallet. One click to authenticate.
                 </p>
               </div>
             </div>
@@ -93,8 +94,8 @@ export default function Home() {
             <div className="mt-4 h-px bg-slate-100 dark:bg-slate-800" />
 
             <div className="mt-4 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <span>Wallet sign-in</span>
-              <span className="group-hover:text-teal-600 dark:group-hover:text-teal-300 transition">Instant</span>
+              <span>Institutional‑grade wallets</span>
+              <span className="group-hover:text-slate-800 dark:group-hover:text-slate-200 transition">Supported</span>
             </div>
           </div>
 
@@ -106,14 +107,14 @@ export default function Home() {
             <div className="flex items-start gap-4">
               <div
                 className="shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl
-                              bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 font-bold"
+                              bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 font-bold"
               >
                 2
               </div>
               <div className="min-w-0">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Create ASA</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Define asset</h3>
                 <p className="mt-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Define asset properties: name, symbol, supply, and optional metadata URL.
+                  Name, supply, metadata – set manager, freeze, and clawback roles.
                 </p>
               </div>
             </div>
@@ -121,8 +122,8 @@ export default function Home() {
             <div className="mt-4 h-px bg-slate-100 dark:bg-slate-800" />
 
             <div className="mt-4 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <span>Mint on TestNet</span>
-              <span className="group-hover:text-teal-600 dark:group-hover:text-teal-300 transition">Fast</span>
+              <span>Compliance parameters</span>
+              <span className="group-hover:text-slate-800 dark:group-hover:text-slate-200 transition">Configurable</span>
             </div>
           </div>
 
@@ -134,14 +135,14 @@ export default function Home() {
             <div className="flex items-start gap-4">
               <div
                 className="shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl
-                              bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 font-bold"
+                              bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 font-bold"
               >
                 3
               </div>
               <div className="min-w-0">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Track Assets</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Mint & manage</h3>
                 <p className="mt-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  View your created assets in a local history table (stored in your browser).
+                  Create your ASA on Algorand TestNet. All transactions are final and auditable.
                 </p>
               </div>
             </div>
@@ -149,8 +150,8 @@ export default function Home() {
             <div className="mt-4 h-px bg-slate-100 dark:bg-slate-800" />
 
             <div className="mt-4 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <span>Local history</span>
-              <span className="group-hover:text-teal-600 dark:group-hover:text-teal-300 transition">Simple</span>
+              <span>On‑chain proof</span>
+              <span className="group-hover:text-slate-800 dark:group-hover:text-slate-200 transition">Instant</span>
             </div>
           </div>
 
@@ -162,14 +163,14 @@ export default function Home() {
             <div className="flex items-start gap-4">
               <div
                 className="shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-xl
-                              bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 font-bold"
+                              bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 font-bold"
               >
                 4
               </div>
               <div className="min-w-0">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Transfer Assets</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Transfer & track</h3>
                 <p className="mt-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Send ALGO, TestNet USDC, or any ASA using the built-in transfer tool.
+                  Move assets, view holdings, and maintain a local history of your tokens.
                 </p>
               </div>
             </div>
@@ -177,8 +178,8 @@ export default function Home() {
             <div className="mt-4 h-px bg-slate-100 dark:bg-slate-800" />
 
             <div className="mt-4 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <span>Built-in transfers</span>
-              <span className="group-hover:text-teal-600 dark:group-hover:text-teal-300 transition">All-in-one</span>
+              <span>Full transparency</span>
+              <span className="group-hover:text-slate-800 dark:group-hover:text-slate-200 transition">Built‑in</span>
             </div>
           </div>
         </div>
@@ -188,45 +189,45 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">Compliance-Ready Features</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">Enterprise‑grade controls</h2>
             <ul className="space-y-4">
               <li className="flex gap-3">
-                <span className="text-blue-600 font-bold text-xl">✓</span>
+                <span className="text-slate-800 dark:text-slate-200 font-bold text-xl">✓</span>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <strong>Manager Role:</strong> Update asset settings
+                  <strong>Manager Role:</strong> Update asset settings after creation
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-blue-600 font-bold text-xl">✓</span>
+                <span className="text-slate-800 dark:text-slate-200 font-bold text-xl">✓</span>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <strong>Freeze Account:</strong> Restrict transfers
+                  <strong>Freeze Account:</strong> Restrict transfers when needed
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-blue-600 font-bold text-xl">✓</span>
+                <span className="text-slate-800 dark:text-slate-200 font-bold text-xl">✓</span>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <strong>Clawback Authority:</strong> Recover tokens if needed
+                  <strong>Clawback Authority:</strong> Recover tokens in exceptional cases
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-blue-600 font-bold text-xl">✓</span>
+                <span className="text-slate-800 dark:text-slate-200 font-bold text-xl">✓</span>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <strong>Metadata Support:</strong> Link off-chain documentation
+                  <strong>Metadata Support:</strong> Link off‑chain documentation and legal records
                 </span>
               </li>
             </ul>
           </div>
           <div className="bg-slate-100 dark:bg-slate-800 rounded-lg p-8">
             <div className="bg-white dark:bg-slate-700 rounded border border-slate-300 dark:border-slate-600 p-6">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 font-mono">Asset Configuration Example</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 font-mono">Asset configuration example</p>
               <div className="space-y-2 text-sm">
                 <div>
                   <span className="text-gray-500 dark:text-gray-400">Name:</span>{' '}
-                  <span className="font-semibold text-gray-900 dark:text-white">Real Estate Token</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">Virtue Real Estate Fund</span>
                 </div>
                 <div>
                   <span className="text-gray-500 dark:text-gray-400">Symbol:</span>{' '}
-                  <span className="font-semibold text-gray-900 dark:text-white">PROPERTY</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">VREF</span>
                 </div>
                 <div>
                   <span className="text-gray-500 dark:text-gray-400">Total Supply:</span>{' '}
@@ -238,7 +239,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-gray-500 dark:text-gray-400">Manager:</span>{' '}
-                  <span className="font-semibold text-gray-900 dark:text-white">Your Wallet</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">Institution wallet</span>
                 </div>
               </div>
             </div>
@@ -247,18 +248,18 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-teal-600 dark:bg-teal-700 text-white">
+      <div className="bg-slate-800 dark:bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to get started?</h2>
-          <p className="text-lg text-teal-100 mb-8 max-w-2xl mx-auto">
-            Launch your first RWA token in minutes. No complicated setup, no hidden fees.
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to tokenise your assets?</h2>
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            Join founders and institutions building on Algorand. Start with a pilot on TestNet.
           </p>
           <Link
             to="/tokenize"
             className={`inline-block px-8 py-3 rounded-lg font-semibold transition ${
               activeAddress
-                ? 'bg-white text-teal-600 dark:bg-slate-800 dark:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-700 shadow-md'
-                : 'bg-teal-400 text-white cursor-not-allowed'
+                ? 'bg-white text-slate-800 dark:bg-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-600 shadow-md'
+                : 'bg-slate-600 text-slate-300 cursor-not-allowed'
             }`}
           >
             Create Your First Asset
